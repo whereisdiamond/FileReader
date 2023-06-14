@@ -11,14 +11,14 @@ import java.util.stream.Collectors;
 public class fileReader {
     public static void main(String[] args) throws IOException {
         //creates the file reader needed
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(""));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/diamondratuppanant/Downloads/Proposal Review.txt"));
 
             //creates a map to input words and integer
         Map<String, Integer> wordCount = new HashMap<>();
 
         String line;
         while ((line = bufferedReader.readLine()) != null) {
-            String[] words = line.split("[\\\\s.;,?:!()\\\"]+");
+            String[] words = line.split("\\W+");
             for (String word : words) {
                 word = word.trim();
                 if (word.length() > 0) {
