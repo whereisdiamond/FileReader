@@ -1,17 +1,18 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 public class fileReader {
     public static void main(String[] args) throws IOException {
+        String link;
+        Scanner scanner= new Scanner(System.in);
+        System.out.println("Enter Txt File path: ");
+        link = scanner.nextLine();
         //creates the file reader needed
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("/Users/diamondratuppanant/Downloads/Proposal Review.txt"));
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(link));
 
             //creates a map to input words and integer
         Map<String, Integer> wordCount = new HashMap<>();
